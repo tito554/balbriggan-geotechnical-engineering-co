@@ -22,6 +22,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .cta .whatsapp-btn:hover { background: #1eb853; }
 
 header { background: var(--dark); color: white; padding: 1.5rem 0 2rem; }
@@ -51,7 +56,7 @@ summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 summary:hover { background: rgba(0,0,0,0.02); }
 summary::-webkit-details-marker { display: none; }
-    .container { padding: 1rem; }
+    
 .cta .whatsapp-btn {
     display: inline-block; background: #25D366; color: white;
     padding: .75rem 1.75rem; border-radius: 8px; font-weight: 600;
@@ -76,14 +81,14 @@ main h2 { color: var(--dark); font-size: 1.35rem; margin: 2rem 0 1rem; padding-b
 .servicio h3 { margin: 0 0 .5rem; color: var(--dark); font-size: .95rem; }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 main h3 { color: var(--dark); font-size: 1.05rem; margin: 1.5rem 0 .5rem; font-weight: 600; }
-    .content-area { flex-direction: column; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 .sidebar {
     width: 240px; background: var(--dark); color: white; flex-shrink: 0;
     border-radius: 10px; position: sticky; top: 1rem; overflow: hidden;
     max-height: calc(100vh - 2rem); overflow-y: auto;
 }
-    main { padding: 1.5rem; }
+    
 footer a { color: rgba(255,255,255,0.85); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .sidebar .cat-sub {
@@ -120,7 +125,7 @@ th { background: var(--dark); color: white; font-weight: 600; font-family: var(-
 
 #mapa-ciudad { height: 240px; max-width: 630px; margin: 1.5rem auto; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
 .cta h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem; color: white; border: none; padding: 0; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 a { color: var(--primary); text-decoration: none; }
 .sidebar .cat-row {
     display: flex; justify-content: space-between; align-items: center;
@@ -129,7 +134,9 @@ a { color: var(--primary); text-decoration: none; }
 }
 details[open] summary::before { content: '− '; }
 * { margin:0; padding:0; box-sizing:border-box; }
-.sidebar .cat-sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }</style>
+.sidebar .cat-sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }
+
+</style>
 <link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#831843"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://balbriggan.geotechnical-engineering.co/investigation/","name":"Investigation in Balbriggan – Ireland","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://balbriggan.geotechnical-engineering.co","@id":"https://balbriggan.geotechnical-engineering.co/#website"},"description":"Ground investigation in Balbriggan addresses the variable subsoil conditions found along this coastal stretch of north County Dublin, where glacial tills a","@type":"WebPage","url":"https://balbriggan.geotechnical-engineering.co/investigation/"},{"itemListElement":[{"@type":"ListItem","position":1,"item":"https://balbriggan.geotechnical-engineering.co/","name":"Home"},{"@type":"ListItem","position":2,"item":"https://balbriggan.geotechnical-engineering.co/investigation/","name":"Investigation"}],"@type":"BreadcrumbList"},{"name":"Investigation","itemListElement":[{"@type":"ListItem","position":1,"name":"CPT (Cone Penetration Test)","url":"https://balbriggan.geotechnical-engineering.co/cpt-test/"}],"@type":"ItemList"}]}</script></head>
 <body>
 
@@ -155,8 +162,14 @@ details[open] summary::before { content: '− '; }
             <nav><a href="index.html" class="home">Home</a><div class="cat-item" data-cat="investigation"><div class="cat-row"><a href="/investigation/" class="cat-name">Investigation</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Investigation"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/cpt-test/">CPT (Cone Penetration Test)</a></div></div><div class="cat-item" data-cat="lab-in-situ"><div class="cat-row"><a href="/lab-in-situ/" class="cat-name">In-Situ Testing</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir In-Situ Testing"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/sand-cone-density/">Field density test (sand cone method)</a></div></div><div class="cat-item" data-cat="laboratory"><div class="cat-row"><a href="/laboratory/" class="cat-name">Laboratory</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratory"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/atterberg-limits/">Atterberg limits</a><a href="/grain-size/">Grain size analysis (sieve + hydrometer)</a></div></div><div class="cat-item" data-cat="foundations"><div class="cat-row"><a href="/foundations/" class="cat-name">Foundations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Foundations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/piles/">Pile foundation design</a></div></div><div class="cat-item" data-cat="slopes"><div class="cat-row"><a href="/slopes/" class="cat-name">Slopes & Walls</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Slopes & Walls"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/anchors/">Active/passive anchor design</a><a href="/retaining-walls/">Retaining wall design</a><a href="/slope-stability/">Slope stability analysis</a></div></div><div class="cat-item" data-cat="ground-improvement"><div class="cat-row"><a href="/ground-improvement/" class="cat-name">Ground improvement</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Ground improvement"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/stone-columns/">Stone column design</a><a href="/vibrocompaction/">Vibrocompaction design</a></div></div><div class="cat-item" data-cat="seismic"><div class="cat-row"><a href="/seismic/" class="cat-name">Seismic</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Seismic"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/seismic-isolation/">Base isolation seismic design</a><a href="/seismic-microzonation/">Seismic microzonation</a><a href="/liquefaction/">Soil liquefaction analysis</a></div></div><div class="cat-item" data-cat="road-geotechnics"><div class="cat-row"><a href="/road-geotechnics/" class="cat-name">Roadway</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Roadway"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/cbr-road/">CBR study for road design</a><a href="/flexible-pavement/">Flexible pavement design</a><a href="/rigid-pavement/">Rigid pavement design</a></div></div><div class="cat-item" data-cat="excavations"><div class="cat-row"><a href="/excavations/" class="cat-name">Underground Excavations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Underground Excavations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/soft-ground-tunnels/">Geotechnical analysis for soft soil tunnels</a><a href="/deep-excavations/">Geotechnical design of deep excavations</a><a href="/excavation-monitoring/">Geotechnical excavation monitoring</a></div></div></nav>
         </aside>
         <main>
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><p>Ground investigation in Balbriggan addresses the variable subsoil conditions found along this coastal stretch of north County Dublin, where glacial tills and alluvial deposits overlie interbedded limestone and shale bedrock. Understanding these strata is essential under Irish Standard I.S. EN 1997-2, which mandates a phased site assessment to manage geotechnical risk. Targeted in‑situ methods such as <a href="cpt-test">CPT (Cone Penetration Test)</a> provide continuous profiling of soft clays and loose sands, clarifying bearing capacity and settlement potential before design begins.</p>
-<p>Residential developments, school extensions, and drainage schemes across Balbriggan routinely require this level of investigation to satisfy planning conditions and structural warranty requirements. For sites with shallow rock or where sample recovery is critical, combining <a href="cpt-test">CPT</a> with complementary borehole drilling and laboratory testing ensures a full ground model. The resulting data supports foundation design, earthworks specification, and flood‑risk assessments, delivering compliant, buildable solutions for the region’s growing infrastructure needs.</p></div></section>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
+<img src="/img/ensayo-triaxial-3.webp" alt="Investigation in Balbriggan" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<p>In Balbriggan, a thorough geotechnical <a href="/investigation/">investigation</a> is the critical first step for any construction project, designed to de-risk ground conditions and inform foundation design. The town’s geology, characterised by glacial tills overlying Lower Palaeozoic greywackes and shales, presents variable conditions ranging from stiff boulder clays to softer alluvial deposits near the Broadmeadow River. Local compliance is dictated by the Building Regulations (Part A – Structure) and Eurocode 7 (I.S. EN 1997), which mandates a phased approach to ground investigation. This process defines the ground model, identifies geohazards such as potential dissolution features in the underlying limestone, and provides the essential parameters for structural engineers, often beginning with a detailed desk study and walkover survey.</p>
+<p>Our field methodology in Balbriggan strictly adheres to the standards set by the Institution of Engineers of Ireland and relevant IS EN ISO norms, ensuring data of the highest integrity. We deploy a complementary suite of in-situ testing techniques, with <a href="/cpt-test/">CPT (Cone Penetration Testing)</a> providing continuous high-resolution profiles of stratigraphy and soil behaviour type, particularly effective in the soft clay and silt deposits. This is routinely calibrated and supplemented by physical <a href="/lab-in-situ/">in-situ testing</a> methods, including the <a href="/sand-cone-density/">field density test (sand cone method)</a> to verify compaction in engineered fills. These direct measurements are essential for calculating bearing capacity and settlement, moving beyond correlation-based estimates to project-specific empirical data.</p>
+<p>Typical projects in Balbriggan, from residential extensions on Chapel Street to new industrial units in the business parks, demand a pragmatic and focused investigation. A common scope for a housing development on glacial till would involve a combination of dynamic probing, trial pitting to inspect shallow obstructions, and rotary cored boreholes to prove rockhead. The resulting soil and rock samples undergo rigorous analysis in our <a href="/laboratory/">laboratory</a>, where index tests are performed to classify the materials precisely. This includes establishing the <a href="/atterberg-limits/">Atterberg limits</a> to assess the plasticity and potential shrink-swell behaviour of cohesive soils, and conducting a <a href="/grain-size/">grain size analysis (sieve + hydrometer)</a> to fully define the particle size distribution for granular layers, directly influencing drainage and frost-heave assessments.</p>
+<img src="/img/calicatas-exploratorias-2.webp" alt="Investigation in Balbriggan" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+
+<p>The investigative process culminates in a comprehensive factual report, or a fully interpretive geotechnical design report, that presents a clear ground model complete with engineering logs, laboratory test results, and geotechnical parameters. This deliverable provides definitive guidance for <a href="/foundations/">foundations</a>, recommending solutions such as traditional strip footings, piles to bypass soft ground, or engineered fill. The core value proposition for our Balbriggan clients is the delivery of technical certainty: we transform subsurface unknowns into a manageable, quantified risk profile. This allows your design team to optimise foundation solutions, prevent costly over-design, and eliminate the programme delays and budget overruns associated with unforeseen ground conditions, ensuring a safe and compliant build.</p></div></section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../cpt-test/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">CPT (Cone Penetration Test)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section>
 
     <section class="block mid-cta-3b59-3b59" style="padding:2rem 0">

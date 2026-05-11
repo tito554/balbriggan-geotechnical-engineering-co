@@ -25,6 +25,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .cta .whatsapp-btn:hover { background: #1eb853; }
 
 header { background: var(--dark); color: white; padding: 1.5rem 0 2rem; }
@@ -54,7 +59,7 @@ summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 summary:hover { background: rgba(0,0,0,0.02); }
 summary::-webkit-details-marker { display: none; }
-    .container { padding: 1rem; }
+    
 .cta .whatsapp-btn {
     display: inline-block; background: #25D366; color: white;
     padding: .75rem 1.75rem; border-radius: 8px; font-weight: 600;
@@ -79,14 +84,14 @@ main h2 { color: var(--dark); font-size: 1.35rem; margin: 2rem 0 1rem; padding-b
 .servicio h3 { margin: 0 0 .5rem; color: var(--dark); font-size: .95rem; }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 main h3 { color: var(--dark); font-size: 1.05rem; margin: 1.5rem 0 .5rem; font-weight: 600; }
-    .content-area { flex-direction: column; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 .sidebar {
     width: 240px; background: var(--dark); color: white; flex-shrink: 0;
     border-radius: 10px; position: sticky; top: 1rem; overflow: hidden;
     max-height: calc(100vh - 2rem); overflow-y: auto;
 }
-    main { padding: 1.5rem; }
+    
 footer a { color: rgba(255,255,255,0.85); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .sidebar .cat-sub {
@@ -123,7 +128,7 @@ th { background: var(--dark); color: white; font-weight: 600; font-family: var(-
 
 #mapa-ciudad { height: 240px; max-width: 630px; margin: 1.5rem auto; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
 .cta h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem; color: white; border: none; padding: 0; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 a { color: var(--primary); text-decoration: none; }
 .sidebar .cat-row {
     display: flex; justify-content: space-between; align-items: center;
@@ -132,7 +137,9 @@ a { color: var(--primary); text-decoration: none; }
 }
 details[open] summary::before { content: '− '; }
 * { margin:0; padding:0; box-sizing:border-box; }
-.sidebar .cat-sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }</style>
+.sidebar .cat-sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }
+
+</style>
 <link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#831843"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></head>
 <body>
 
@@ -195,6 +202,8 @@ details[open] summary::before { content: '− '; }
 
             <section>
                 <h2>Our services</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>MASW surveys in Balbriggan are delivered as a modular package — choose the depth and resolution that matches the project stage, from preliminary site class screening to detailed 2D stiffness cross-sections.</p>
                 <style>.servicios-grid .servicio{flex:0 0 calc(50% - .5rem);min-width:260px;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:10px;background:#FFFFFF;position:relative;transition:border-color .18s,box-shadow .18s,transform .18s}.servicio-arrow{position:absolute;right:1rem;bottom:.8rem;color:#C9A961;font-weight:700;opacity:.55;transition:transform .18s,opacity .18s}.servicios-grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:flex-start}.servicios-grid a.servicio-link:hover{border-color:#C9A961;box-shadow:0 4px 14px rgba(0,0,0,.08);transform:translateY(-2px)}.servicios-grid a.servicio-link:hover h3{color:#C9A961}.servicios-grid a.servicio-link:hover .servicio-arrow{transform:translateX(4px);opacity:1}.servicios-grid a.servicio-link{display:block;text-decoration:none;color:inherit;cursor:pointer}</style><div class="servicios-grid"><div class="servicio"><h3>VS30 Site Class Determination</h3><p>Single-line MASW survey processed to a 1D shear wave velocity profile down to thirty metres. Delivers the Eurocode 8 site class and the VS30 value for structural design input. Suitable for residential extensions, commercial units, and school buildings where the design team needs a measured classification to replace the default ground type.</p></div><div class="servicio"><h3>2D Shear Wave Velocity Cross-Section</h3><p>Multiple parallel MASW lines or a rolling spread along a linear alignment, processed into a continuous 2D stiffness section. Used for pipeline routes, embankment foundations, and cut-and-cover excavations where lateral variability in the glacial till governs differential settlement predictions.</p></div></div>
             </section>

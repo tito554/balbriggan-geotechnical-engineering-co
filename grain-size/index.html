@@ -25,6 +25,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .cta .whatsapp-btn:hover { background: #1eb853; }
 
 header { background: var(--dark); color: white; padding: 1.5rem 0 2rem; }
@@ -54,7 +59,7 @@ summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 summary:hover { background: rgba(0,0,0,0.02); }
 summary::-webkit-details-marker { display: none; }
-    .container { padding: 1rem; }
+    
 .cta .whatsapp-btn {
     display: inline-block; background: #25D366; color: white;
     padding: .75rem 1.75rem; border-radius: 8px; font-weight: 600;
@@ -79,14 +84,14 @@ main h2 { color: var(--dark); font-size: 1.35rem; margin: 2rem 0 1rem; padding-b
 .servicio h3 { margin: 0 0 .5rem; color: var(--dark); font-size: .95rem; }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 main h3 { color: var(--dark); font-size: 1.05rem; margin: 1.5rem 0 .5rem; font-weight: 600; }
-    .content-area { flex-direction: column; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 .sidebar {
     width: 240px; background: var(--dark); color: white; flex-shrink: 0;
     border-radius: 10px; position: sticky; top: 1rem; overflow: hidden;
     max-height: calc(100vh - 2rem); overflow-y: auto;
 }
-    main { padding: 1.5rem; }
+    
 footer a { color: rgba(255,255,255,0.85); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .sidebar .cat-sub {
@@ -123,7 +128,7 @@ th { background: var(--dark); color: white; font-weight: 600; font-family: var(-
 
 #mapa-ciudad { height: 240px; max-width: 630px; margin: 1.5rem auto; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
 .cta h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem; color: white; border: none; padding: 0; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 a { color: var(--primary); text-decoration: none; }
 .sidebar .cat-row {
     display: flex; justify-content: space-between; align-items: center;
@@ -132,7 +137,9 @@ a { color: var(--primary); text-decoration: none; }
 }
 details[open] summary::before { content: '− '; }
 * { margin:0; padding:0; box-sizing:border-box; }
-.sidebar .cat-sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }</style>
+.sidebar .cat-sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }
+
+</style>
 <link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#831843"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></head>
 <body>
 
@@ -177,6 +184,8 @@ details[open] summary::before { content: '− '; }
 
             <section>
                 <h2>Risks and considerations in Balbriggan</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>The drift geology around Balbriggan—dominantly Late Devensian till overlying Carboniferous shale and limestone—produces a till matrix that is dense, overconsolidated, and deceptively well-graded in the hand specimen. When you run a hydrometer on the fines, however, it regularly shows a clay fraction exceeding fifteen percent, and that clay mineralogy is predominantly illite with a moderate shrink-swell potential. If the grain size curve is truncated at the No. 200 sieve and the clay fraction is ignored, the pavement design assumes a free-draining subgrade that does not exist. The consequence is differential frost heave along the R132 corridor or excessive pore pressure buildup under the floor slabs of the new residential schemes east of the railway line. We have also encountered lenses of glaciofluvial sand within the till that appear clean but contain enough silt-sized carbonate flour to trigger collapse settlement when saturated. A complete particle size distribution—coarse, intermediate, and colloidal—allows the drainage and consolidation behaviour to be predicted before the excavator bucket breaks ground.</p>
             </section>
 
@@ -201,6 +210,8 @@ details[open] summary::before { content: '− '; }
 
             <section>
                 <h2>Quick answers</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <details><summary>How much does a grain size analysis cost for a project in Balbriggan?</summary><p>A standard combined sieve and hydrometer analysis typically runs between €90 and €190 per sample, depending on whether the material is predominantly granular or fine-grained and how many splits are required. We provide a fixed-price quote once we know the number of samples and the expected soil type.</p></details><details><summary>What is the difference between a sieve analysis and a hydrometer test?</summary><p>A sieve analysis measures the distribution of particles larger than 75 microns (retained on the No. 200 sieve) by passing the material through a stack of progressively finer sieves. The hydrometer test measures the distribution of silt and clay particles smaller than 75 microns by observing the sedimentation rate in a water column. A complete grain size curve requires both methods to cover the full range from gravel down to the colloidal clay fraction.</p></details><details><summary>How much soil do you need for a combined sieve and hydrometer test?</summary><p>We ask for at least 500 grams of dry material for sandy soils and around 200 grams for silts and clays. The sample must be representative of the layer in question, so we recommend taking it from a disturbed bulk sample bagged at the excavation face rather than from the auger flights, which can segregate the fines.</p></details><details><summary>How long does it take to get the results back?</summary><p>A full combined analysis generally takes three to five working days due to the 24-hour sedimentation period required for the hydrometer. A rapid wash-sieve analysis on clean granular material can be turned around in two working days.</p></details><details><summary>Can the grain size curve tell me if the soil is frost-susceptible?</summary><p>Yes. Materials with more than three percent by mass finer than 20 microns are considered frost-susceptible under Irish pavement design guidelines. The hydrometer portion of the test gives you that exact percentage, which is critical for Balbriggan where winter ground temperatures regularly drop below zero and the till matrix often exceeds the three-percent threshold.</p></details>
             </section>
 

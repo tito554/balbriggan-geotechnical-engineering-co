@@ -25,6 +25,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .cta .whatsapp-btn:hover { background: #1eb853; }
 
 header { background: var(--dark); color: white; padding: 1.5rem 0 2rem; }
@@ -54,7 +59,7 @@ summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 summary:hover { background: rgba(0,0,0,0.02); }
 summary::-webkit-details-marker { display: none; }
-    .container { padding: 1rem; }
+    
 .cta .whatsapp-btn {
     display: inline-block; background: #25D366; color: white;
     padding: .75rem 1.75rem; border-radius: 8px; font-weight: 600;
@@ -79,14 +84,14 @@ main h2 { color: var(--dark); font-size: 1.35rem; margin: 2rem 0 1rem; padding-b
 .servicio h3 { margin: 0 0 .5rem; color: var(--dark); font-size: .95rem; }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 main h3 { color: var(--dark); font-size: 1.05rem; margin: 1.5rem 0 .5rem; font-weight: 600; }
-    .content-area { flex-direction: column; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 .sidebar {
     width: 240px; background: var(--dark); color: white; flex-shrink: 0;
     border-radius: 10px; position: sticky; top: 1rem; overflow: hidden;
     max-height: calc(100vh - 2rem); overflow-y: auto;
 }
-    main { padding: 1.5rem; }
+    
 footer a { color: rgba(255,255,255,0.85); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .sidebar .cat-sub {
@@ -123,7 +128,7 @@ th { background: var(--dark); color: white; font-weight: 600; font-family: var(-
 
 #mapa-ciudad { height: 240px; max-width: 630px; margin: 1.5rem auto; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
 .cta h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem; color: white; border: none; padding: 0; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 a { color: var(--primary); text-decoration: none; }
 .sidebar .cat-row {
     display: flex; justify-content: space-between; align-items: center;
@@ -132,7 +137,9 @@ a { color: var(--primary); text-decoration: none; }
 }
 details[open] summary::before { content: '− '; }
 * { margin:0; padding:0; box-sizing:border-box; }
-.sidebar .cat-sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }</style>
+.sidebar .cat-sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }
+
+</style>
 <link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#831843"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></head>
 <body>
 
@@ -177,6 +184,8 @@ details[open] summary::before { content: '− '; }
 
             <section>
                 <h2>Risks and considerations in Balbriggan</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>Balbriggan's growth from a small fishing village into a commuter town for Dublin has pushed construction onto marginal land. The old marsh areas behind the railway line were filled in decades ago with uncontrolled material. Today, those plots are being developed. The risk is hidden compressible layers that consolidate slowly under load. Without a proper soil mechanics study, a building might settle for years, cracking finishes and distorting door frames. We've seen fill thickness vary by over two meters across a single residential site. Our lab quantifies the compression index (Cc) and the coefficient of consolidation (Cv) to forecast long-term movement. Another hazard is the seasonal fluctuation of the water table, which rises within a meter of the surface in winter across much of the coastal plain. This changes effective stress and can trigger instability in excavations if not factored into the retaining design.</p>
             </section>
 
@@ -215,7 +224,7 @@ details[open] summary::before { content: '− '; }
                     L.circle([53.6119,-6.1823],{radius:3000,color:'#C9A961',fillColor:'#B08D4A',fillOpacity:0.18,weight:2}).addTo(map).bindPopup('Coverage area — Balbriggan');
                 </script>
             </section>
-        </main>
+        <section class="block video-block" style="padding:2rem 1.5rem"><div style="max-width:720px;margin:0 auto"><h2 style="margin-bottom:1rem;font-weight:700;font-size:1.4rem">Explanatory video</h2><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px"><iframe src="https://www.youtube.com/embed/rC_fk2M4VH4" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" loading="lazy" allowfullscreen></iframe></div></div></section></main>
     </div>
 </div>
 
