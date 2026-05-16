@@ -178,7 +178,7 @@ header nav a,.menu a{font-size:.78rem !important}
 }
 </style>
 <style id="layout-defensive">
-html,body{overflow-x:hidden;max-width:100vw}
+body{overflow-x:clip;max-width:100vw}
 body>*{max-width:100vw}
 @media (min-width:901px){
   aside{position:relative}
@@ -189,6 +189,62 @@ body>*{max-width:100vw}
   aside{width:100% !important;position:static !important;height:auto !important}
   .navbar{flex-wrap:wrap}
 }
+</style>
+<style id="navbar-fixed-override">
+nav.navbar,.header-top,.main-header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:1010 !important}
+body{padding-top:60px}
+.hero,.hero-inner,header.hero{padding-top:1rem !important}
+@media (max-width:900px){body{padding-top:90px}}
+</style>
+<style id="sidebar-hover-fix-v2">
+/* Adaptativo: hover preserva color heredado (white en dark sidebar, dark en light) */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+/* Bg sutil que funciona en cualquier fondo */
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+aside .cat-sub-wrap a:hover{background:rgba(127,127,127,.08) !important}
+</style>
+<style id="cat-toggle-no-box">
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+.cat-arrow{display:inline-block}
+</style>
+<style id="nav-arrow-no-box">
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+</style>
+<style id="post-fixes-v2">
+/* Inline links visibles en prosa */
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn){color:var(--accent,#1d4ed8) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn):hover{text-decoration-color:currentColor;opacity:.85}
+/* Sidebar hover adaptive */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+/* Cat-toggle sin caja */
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+/* Nav-arrow sin caja */
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+/* Navbar compacto */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+/* Layout defensive */
+body{overflow-x:clip;max-width:100vw}
+body>*{max-width:100vw}
+</style>
+<style id="nav-fix-v3">
+nav.navbar, header nav, .nav-bar, .top-nav { font-size: 1rem !important; }
+nav.navbar a, header nav a, .nav-bar a, .top-nav a, .nav-cat-link, .nav-item a { font-size: 1rem !important; color: #FFFFFF !important; font-weight: 500 !important; }
+nav.navbar a:hover, header nav a:hover, .nav-cat-link:hover { color: #FCD34D !important; text-decoration: underline; }
+nav[aria-label="breadcrumb"], .crumb, .breadcrumb { color: rgba(255,255,255,.85) !important; font-size: .82rem !important; }
+nav[aria-label="breadcrumb"] a, .crumb a, .breadcrumb a { color: #FFFFFF !important; text-decoration: underline; font-weight: 600; }
+nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important; }
+.crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
+.brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
 </head>
 <body>
@@ -215,14 +271,7 @@ body>*{max-width:100vw}
             <nav><a href="index.html" class="home">Home</a><div class="cat-item" data-cat="investigation"><div class="cat-row"><a href="/investigation/" class="cat-name">Investigation</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Investigation"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/cpt-test/">CPT (Cone Penetration Test)</a></div></div><div class="cat-item" data-cat="lab-in-situ"><div class="cat-row"><a href="/lab-in-situ/" class="cat-name">In-Situ</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir In-Situ"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/sand-cone-density/">Field density test (sand cone method)</a></div></div><div class="cat-item" data-cat="laboratory"><div class="cat-row"><a href="/laboratory/" class="cat-name">Laboratory</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratory"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/atterberg-limits/">Atterberg limits</a><a href="/grain-size/">Grain size analysis (sieve + hydrometer)</a></div></div><div class="cat-item" data-cat="foundations"><div class="cat-row"><a href="/foundations/" class="cat-name">Foundations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Foundations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/piles/">Pile foundation design</a></div></div><div class="cat-item" data-cat="slopes"><div class="cat-row"><a href="/slopes/" class="cat-name">Slopes & Walls</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Slopes & Walls"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/anchors/">Active/passive anchor design</a><a href="/retaining-walls/">Retaining wall design</a><a href="/slope-stability/">Slope stability analysis</a></div></div><div class="cat-item" data-cat="ground-improvement"><div class="cat-row"><a href="/ground-improvement/" class="cat-name">Improvement</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Improvement"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/stone-columns/">Stone column design</a><a href="/vibrocompaction/">Vibrocompaction design</a></div></div><div class="cat-item" data-cat="seismic"><div class="cat-row"><a href="/seismic/" class="cat-name">Seismic</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Seismic"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/seismic-isolation/">Base isolation seismic design</a><a href="/seismic-microzonation/">Seismic microzonation</a><a href="/liquefaction/">Soil liquefaction analysis</a></div></div><div class="cat-item" data-cat="road-geotechnics"><div class="cat-row"><a href="/road-geotechnics/" class="cat-name">Roadway</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Roadway"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/cbr-road/">CBR study for road design</a><a href="/flexible-pavement/">Flexible pavement design</a><a href="/rigid-pavement/">Rigid pavement design</a></div></div><div class="cat-item" data-cat="excavations"><div class="cat-row"><a href="/excavations/" class="cat-name">Excavations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Excavations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/soft-ground-tunnels/">Geotechnical analysis for soft soil tunnels</a><a href="/deep-excavations/">Geotechnical design of deep excavations</a><a href="/excavation-monitoring/">Geotechnical excavation monitoring</a></div></div></nav>
         </aside>
         <main>
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
-<img src="/img/ensayo-triaxial-3.webp" alt="Investigation in Balbriggan" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
-<p>In Balbriggan, a thorough geotechnical <a href="/investigation/">investigation</a> is the critical first step for any construction project, designed to de-risk ground conditions and inform foundation design. The town’s geology, characterised by glacial tills overlying Lower Palaeozoic greywackes and shales, presents variable conditions ranging from stiff boulder clays to softer alluvial deposits near the Broadmeadow River. Local compliance is dictated by the Building Regulations (Part A – Structure) and Eurocode 7 (I.S. EN 1997), which mandates a phased approach to ground investigation. This process defines the ground model, identifies geohazards such as potential dissolution features in the underlying limestone, and provides the essential parameters for structural engineers, often beginning with a detailed desk study and walkover survey.</p>
-<p>Our field methodology in Balbriggan strictly adheres to the standards set by the Institution of Engineers of Ireland and relevant IS EN ISO norms, ensuring data of the highest integrity. We deploy a complementary suite of In-Situ techniques, with <a href="/cpt-test/">CPT (Cone Penetration Testing)</a> providing continuous high-resolution profiles of stratigraphy and soil behaviour type, particularly effective in the soft clay and silt deposits. This is routinely calibrated and supplemented by physical <a href="/lab-in-situ/">In-Situ</a> methods, including the <a href="/sand-cone-density/">field density test (sand cone method)</a> to verify compaction in engineered fills. These direct measurements are essential for calculating bearing capacity and settlement, moving beyond correlation-based estimates to project-specific empirical data.</p>
-<p>Typical projects in Balbriggan, from residential extensions on Chapel Street to new industrial units in the business parks, demand a pragmatic and focused investigation. A common scope for a housing development on glacial till would involve a combination of dynamic probing, trial pitting to inspect shallow obstructions, and rotary cored boreholes to prove rockhead. The resulting soil and rock samples undergo rigorous analysis in our <a href="/laboratory/">laboratory</a>, where index tests are performed to classify the materials precisely. This includes establishing the <a href="/atterberg-limits/">Atterberg limits</a> to assess the plasticity and potential shrink-swell behaviour of cohesive soils, and conducting a <a href="/grain-size/">grain size analysis (sieve + hydrometer)</a> to fully define the particle size distribution for granular layers, directly influencing drainage and frost-heave assessments.</p>
-<img src="/img/calicatas-exploratorias-2.webp" alt="Investigation in Balbriggan" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
-
-<p>The investigative process culminates in a comprehensive factual report, or a fully interpretive geotechnical design report, that presents a clear ground model complete with engineering logs, laboratory test results, and geotechnical parameters. This deliverable provides definitive guidance for <a href="/foundations/">foundations</a>, recommending solutions such as traditional strip footings, piles to bypass soft ground, or engineered fill. The core value proposition for our Balbriggan clients is the delivery of technical certainty: we transform subsurface unknowns into a manageable, quantified risk profile. This allows your design team to optimise foundation solutions, prevent costly over-design, and eliminate the programme delays and budget overruns associated with unforeseen ground conditions, ensuring a safe and compliant build.</p></div></section>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><p>Geotechnical site investigation is the first and most decisive phase of any engineering project that interacts with the ground. Its goal is to characterize stratigraphy, mechanical and hydraulic properties, and geological hazards of the subsurface, through a planned combination of indirect exploration (geophysics), direct exploration (boreholes, test pits) and in-situ testing.</p><p>Rotary core drilling allows undisturbed sampling and observation of stratigraphic contacts. SPT and CPTu tests, performed during drilling, deliver continuous profiles of resistance and drained/undrained behavior. Exploratory test pits complement surface information, especially for lightweight foundations or pavements.</p><p>Geophysical methods —seismic refraction, MASW, electrical tomography, GPR— cover large areas with low impact and reasonable cost, identifying stiffness contrasts and bedrock depth. Their interpretation is calibrated with localized boreholes to reduce uncertainty.</p><p>The investigation program must be proportional to project complexity and identified risks. Integration with background analysis, geomorphology and seismic hazard assessment ensures a robust geotechnical model, the basis for all subsequent design and construction decisions.</p></div></section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../cpt-test/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">CPT (Cone Penetration Test)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section>
 
     <section class="block mid-cta-3b59-3b59" style="padding:2rem 0">
@@ -248,7 +297,7 @@ body>*{max-width:100vw}
   L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",{
     attribution:"&copy; OpenStreetMap contributors &copy; CARTO",maxZoom:19,subdomains:"abcd"
   }).addTo(m);
-  L.marker([53.6119,-6.1823],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(m).bindPopup("Coverage area — Balbriggan");
+  L.marker([53.6119,-6.1823],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36],popupAnchor:[0,-32]})}).addTo(m).bindPopup("Coverage area — Balbriggan");
 })();
 </script>
 </div>
