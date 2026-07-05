@@ -13,6 +13,7 @@
 - [Flexible Pavement](https://balbriggan.geotechnical-engineering.co/flexible-pavement/)
 - [Footings](https://balbriggan.geotechnical-engineering.co/footings/)
 - [Foundations](https://balbriggan.geotechnical-engineering.co/foundations/)
+- [Geophysics](https://balbriggan.geotechnical-engineering.co/geophysics/)
 - [Grain Size](https://balbriggan.geotechnical-engineering.co/grain-size/)
 - [Ground Improvement](https://balbriggan.geotechnical-engineering.co/ground-improvement/)
 - [Grouting](https://balbriggan.geotechnical-engineering.co/grouting/)
